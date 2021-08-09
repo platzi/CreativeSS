@@ -1,0 +1,487 @@
+:root {
+    --dark-pink:  #f790d3;
+    --light-pink: #f6c7e6;
+    --dark-green: #51af5e;
+    --light-green: #51af5e;
+    --platzi-green: #98CA3F;
+    --platzi-dark-blue: #121f3d;
+    --sky-blue: #b4ddf0;    
+    --shadow: 0 19px 38px rgba(0,0,0,0.30),
+              0 15px 12px rgba(0,0,0,0.22);
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    counter-reset: score;
+}
+
+.comic {
+    position: relative;
+    border: 8px solid black;
+    border-radius: 23px;
+    height: 720px;
+    width: 1200px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
+
+.scene1 {
+    background: var(--sky-blue);
+    float: left;
+    height: 354px;
+    width: 594px;
+    border: 3px solid black;
+    overflow: hidden;
+    margin: 0;
+}
+.scene2 {
+    background: var(--sky-blue);
+    float: right;
+    height: 354px;
+    width: 594px;
+    border: 3px solid black;
+    overflow: hidden;
+    margin: 0;
+}
+.scene3 {
+    background: var(--sky-blue);
+    float: left;
+    height: 354px;
+    width: 594px;
+    border: 3px solid black;
+    overflow: hidden;
+    margin: 0;
+}
+.scene4 {
+    background: var(--sky-blue);
+    float: right;
+    height: 354px;
+    width: 594px;
+    border: 3px solid black;
+    overflow: hidden;
+    margin: 0;
+}
+
+/*Scence 1*/
+.sun {
+  background: yellow;
+  border-radius: 50%;
+  height: 110px;
+  width: 110px;  
+  position: absolute;
+  top: 20px;
+  left: 460px;
+  opacity: 0.85;
+  z-index: 0;
+}
+
+.grass {
+  background: var(--dark-green);
+  height: 20px;
+  width: 310px;
+  position: absolute;
+  left: 287px;
+  bottom: 362px;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.hero {
+  position: absolute;
+  left: 505px;
+  bottom: 430px;
+  z-index: 0; 
+}
+
+.hero-head {
+  background: var(--light-pink);
+  height: 19px;
+  width: 18px;
+  position: absolute;  
+  left: 8px;
+  bottom: -4px;
+  border-radius: 50%;
+  z-index: 1; 
+}
+
+.hero-mask {
+  background: var(--platzi-dark-blue);
+  height: 23px;
+  width: 24px;
+  position: absolute;  
+  left: 5px;
+  bottom: -5px;
+  border-radius: 50%;
+  z-index: 0; 
+}
+
+.hero-cap {
+  background: var(--platzi-green);
+  height: 53px;
+  width: 35px;
+  position: absolute;  
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.hero-body {
+  background: var(--platzi-dark-blue);
+  height: 50px;
+  width: 25px;
+  position: absolute;
+  left: 5px; 
+  bottom: -52px; 
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.dialogue-1 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialogue-1 img {
+  height: 155px;
+  width: 260px;
+  position: absolute;
+  bottom: 432px;
+  left: 267px;
+  z-index: 0;  
+}
+
+.dialogue-1 .text-dialogue-1 {
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  bottom: -179px;
+  left: 98px;
+}
+
+.mountain, .mountain-two {
+  position: absolute;
+  bottom: 362px;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 180px solid brown;
+  z-index: 1;
+}
+.mountain-two {
+  left: -60px;
+  bottom:362px;
+  opacity: .6;
+  z-index: 0;
+}
+.mountain-top {
+  position: absolute;
+  right: -65px;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-bottom: 76px solid white;
+  z-index: 2;
+}
+.mountain-cap-1, .mountain-cap-2, .mountain-cap-3 {
+  position: absolute;
+  top: 70px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid white;
+}
+.mountain-cap-1 { 
+  left: -55px; 
+}
+.mountain-cap-2 { 
+  left: -25px; 
+}
+.mountain-cap-3 { 
+  left: 5px; 
+}
+
+.cloud, .cloud2, .cloud::before, .cloud::after, .cloud2::before, .cloud2::after {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  background:white;  
+  border-radius: 100px / 50px;
+}
+.cloud { 
+  bottom: 585px;
+  animation-name: cloud;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 2;        
+}
+.cloud2 { 
+  bottom: 640px;
+  animation-name: cloud2;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 0;        
+}
+
+@keyframes cloud {
+ 
+  0%{ 
+    left: 0px; 
+  }
+  50%{ 
+    left: 410px; 
+  } 
+  75%{
+    left: 200px;
+  } 
+  100%{
+    left:2px;
+  }
+}
+
+@keyframes cloud2 {
+ 
+  0%{ 
+    left: 400px; 
+  }
+  50%{ 
+    left: 20px; 
+  } 
+  75%{
+    left: 200px;
+  } 
+  100%{
+    left:405px;
+  }
+}
+
+.cloud::before {
+  content: '';
+  left: 50px;
+}
+.cloud::after {
+  content: '';
+  left: 25px;
+  top: -10px;
+}
+.cloud2::before {
+  content: '';
+  left: 50px;
+}
+.cloud2::after {
+  content: '';
+  left: 23px;
+  top: -15px;
+}
+
+/*Scence 2*/
+.colina {
+  position: absolute;
+  bottom: 362.5px;
+  border-left: 615px solid transparent;  
+  border-bottom: 180px solid brown;
+  z-index: 0;  
+}
+
+.sun2 {
+  background: yellow;
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;  
+  position: absolute;
+  top: 20px;
+  left: 610px;  
+  opacity: 0.85;
+  z-index: 0;
+}
+
+.cloud3, .cloud3::before, .cloud3::after {
+  position: absolute;
+  width: 115px;
+  height: 60px;
+  background:white;  
+  border-radius: 100px / 50px;
+}
+.cloud3 { 
+  bottom: 605px;
+  animation-name: cloud3;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 2;        
+}
+
+@keyframes cloud3 {
+ 
+  0%{ 
+    left: 620px; 
+  }
+  50%{ 
+    left: 765px; 
+  } 
+  75%{
+    left: 720px;
+  } 
+  100%{
+    left: 620px;
+  }
+}
+
+.cloud3::before {
+  content: '';
+  left: 50px;
+}
+.cloud3::after {
+  content: '';
+  left: 25px;
+  top: -10px;
+}
+
+.hero2 {
+  position: absolute;
+  left: 700px;
+  bottom: 460px;
+  z-index: 0; 
+}
+
+.hero2-head {
+  background: var(--light-pink);
+  height: 32px;
+  width: 29px;
+  position: absolute;  
+  left: 8px;
+  bottom: -4px;
+  border-radius: 50%;
+  z-index: 1; 
+}
+
+.hero2-mask {
+  background: var(--platzi-dark-blue);
+  height: 38px;
+  width: 35px;
+  position: absolute;  
+  left: 5px;
+  bottom: -5px;
+  border-radius: 50%;
+  z-index: 0; 
+}
+
+.hero2-cap {
+  background: var(--platzi-green);
+  height: 85px;
+  width: 45px;
+  position: absolute;  
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.hero2-body {
+  background: var(--platzi-dark-blue);
+  height: 86px;
+  width: 32px;
+  position: absolute;
+  left: 7px; 
+  bottom: -86px; 
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.dialogue-2 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialogue-2 img {
+  height: 90px;
+  width: 150px;
+  position: absolute;
+  bottom: 490px;
+  left: 740px;
+  z-index: 0;  
+}
+
+.dialogue-2 .text-dialogue-2 {
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  bottom: -160px;
+  left: -85px;
+}
+
+.villain {
+  position: absolute;
+  left: 1090px;
+  bottom: 562px;
+  z-index: 0; 
+}
+
+.villain-head {
+  background: var(--dark-pink);
+  height: 32px;
+  width: 29px;
+  position: absolute;  
+  left: 8px;
+  bottom: -4px;
+  border-radius: 50%;
+  z-index: 1; 
+}
+
+.villain-mask {
+  background: red;
+  height: 38px;
+  width: 35px;
+  position: absolute;  
+  left: 5px;
+  bottom: -5px;
+  border-radius: 50%;
+  z-index: 0; 
+}
+
+.villain-cap {
+  background: red;
+  height: 85px;
+  width: 45px;
+  position: absolute;  
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.villain-body {
+  background: yellow;
+  height: 86px;
+  width: 32px;
+  position: absolute;
+  left: 7px; 
+  bottom: -86px; 
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.dialogue-3 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialogue-3 img {
+  height: 100px; 
+  width: 180px;
+  position: absolute;
+  bottom: 560px;
+  left: 920px;
+  z-index: 0;  
+}
+
+.dialogue-3 .text-dialogue-3 {
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  bottom: -45px;
+  left: 110px;
+}
