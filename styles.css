@@ -5,7 +5,8 @@
     --light-green: #51af5e;
     --platzi-green: #98CA3F;
     --platzi-dark-blue: #121f3d;
-    --sky-blue: #b4ddf0;    
+    --sky-blue: #b4ddf0; 
+    --sky-dark: #062c3d;     
     --shadow: 0 19px 38px rgba(0,0,0,0.30),
               0 15px 12px rgba(0,0,0,0.22);
   }
@@ -48,7 +49,7 @@
     margin: 0;
 }
 .scene3 {
-    background: var(--sky-blue);
+    background: var(--sky-dark);
     float: left;
     height: 354px;
     width: 594px;
@@ -57,7 +58,7 @@
     margin: 0;
 }
 .scene4 {
-    background: var(--sky-blue);
+    background: var(--sky-dark );
     float: right;
     height: 354px;
     width: 594px;
@@ -94,7 +95,35 @@
   position: absolute;
   left: 505px;
   bottom: 430px;
-  z-index: 0; 
+  z-index: 0;
+  animation-name: walk;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-delay: 2.7s;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes walk {
+  0%{
+    transform: translateX(-40px);
+    opacity: 1;  
+  }
+  20%{
+    transform: translateX(-80px);
+    opacity: 1;  
+  }
+  40%{
+    transform: translateX(-160px);
+    opacity: 1;  
+  }
+  80%{
+    transform: translateX(-240px); 
+    opacity: 1;   
+  }
+  100% {
+    transform: translateX(-240px); 
+    opacity: 0;
+  }
 }
 
 .hero-head {
@@ -143,6 +172,29 @@
   display: grid;
   align-items: center;
   justify-content: center;
+  animation-name: dissapear;
+  animation-duration: 500ms;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dissapear {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  95%{
+    opacity: 0.6;
+  }
+  98%{
+    opacity: 0.8;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
 .dialogue-1 img {
@@ -344,7 +396,48 @@
   position: absolute;
   left: 700px;
   bottom: 460px;
-  z-index: 0; 
+  z-index: 0;
+  opacity: 0; 
+  animation-name: climbing;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 7.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes climbing {
+  0%{
+    opacity: 0.2;
+    transform: translate(0px, 0px);
+  }
+  2%{
+    opacity: 0.6;
+    transform: translate(0px, 0px);
+  }
+  5%{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  25%{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }  
+  50%{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  75%{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  99%{
+    transform: translate(480px, -120px);
+    opacity: 1;
+  }
+  100%{
+    transform: translate(485px, -120px);
+    opacity: 0;
+  }
 }
 
 .hero2-head {
@@ -393,6 +486,33 @@
   display: grid;
   align-items: center;
   justify-content: center;
+  animation-name: appeardissapear;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-delay: 7.55s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes appeardissapear {
+  0%{
+    opacity: 0;
+  }
+  3%{
+    opacity: 0.7;
+  }
+  5%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  97%{
+    opacity: 0.4;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
 .dialogue-2 img {
@@ -418,6 +538,12 @@
   left: 1090px;
   bottom: 562px;
   z-index: 0; 
+  animation-name: appeardissapear;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-delay: 7.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .villain-head {
@@ -466,7 +592,13 @@
   display: grid;
   align-items: center;
   justify-content: center;
-}
+  animation-name: appeardissapear;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-delay: 7.6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+} 
 
 .dialogue-3 img {
   height: 100px; 
@@ -484,4 +616,286 @@
   position: relative;
   bottom: -45px;
   left: 110px;
+}
+
+.container-laser1 {
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+  width: 80px;
+  bottom: 375px;  
+  left: 760px;
+  opacity: 0;
+  animation-name: laser;
+  animation-duration: 1.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 9s;
+}
+
+.laser img {
+  position: absolute;
+  height: 50px;
+  transform: rotate(-25deg);  
+}
+
+@keyframes laser {
+  0%{
+    transform: translate(0, -5px);
+    opacity: 0.9;
+  }
+  25%{
+    transform: translate(75px, -25px);
+    opacity: 1;
+  }
+  50%{
+    transform: translate(150px, -45px);
+    opacity: 1;
+  }
+  75%{
+    transform: translate(225px, -65px);
+    opacity: 1;
+  }
+  99%{
+    transform: translate(300px, -89px);
+    opacity: 1;
+  }
+  100%{
+    transform: translate(300px, -90px);
+    opacity: 0;
+  }
+}
+
+/*Scence 3*/
+
+.moon {
+  position: absolute;
+  z-index: 0;
+  height: 75px;
+  width: 75px;
+  bottom: 260px;  
+  left: 40px;
+  z-index: 0;
+}
+
+.moon img {
+  position: absolute;
+  height: 75px;
+}
+
+.cloud4, .cloud4::before, .cloud4::after {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  background:white;  
+  border-radius: 100px / 50px;
+}
+
+.cloud4 { 
+  bottom: 265px;
+  animation-name: cloud4;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 0;        
+}
+
+@keyframes cloud4 {
+ 
+  0%{ 
+    left: 75px; 
+  }
+  50%{ 
+    left: 180px; 
+  } 
+  75%{
+    left: 100px;
+  } 
+  100%{
+    left: 75px;
+  }
+}
+
+.cloud4::before {
+  content: '';
+  left: 50px;
+}
+.cloud4::after {
+  content: '';
+  left: 25px;
+  top: -10px;
+}
+
+.hero3 {
+  position: absolute;
+  left: 460px;
+  bottom: 60px;
+  z-index: 1;
+  animation-name: appeardissapear;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 22s;
+  animation-fill-mode: forwards; 
+  opacity: 0;
+}
+
+.hero3-head {
+  background: var(--light-pink);
+  height: 56px;
+  width: 53px;
+  position: absolute;  
+  left: 13.5px;
+  bottom: 88px;
+  border-radius: 50%;
+  z-index: 3; 
+}
+
+.hero3-mask {
+  background: var(--platzi-dark-blue);
+  height: 65px;
+  width: 70px;
+  position: absolute;  
+  left: 5px;
+  bottom: 85px;
+  border-radius: 50%;
+  z-index: 2; 
+}
+
+.hero3-cap {
+  background: var(--platzi-green);
+  height: 153px;
+  width: 85px;
+  position: absolute;  
+  border-radius: 20px;
+  z-index: 1;
+  bottom: -55px;
+  left: -1px;
+}
+
+.hero3-body {
+  background: var(--platzi-dark-blue);
+  height: 140px;
+  width: 70px;
+  position: absolute;
+  left: 5px; 
+  bottom: -52px; 
+  border-radius: 18px;
+  z-index: 2;
+}
+
+.grass2 {
+  background: var(--dark-green);
+  height: 30px;
+  width: 597px;
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.dialogue-4 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  animation-name: appeardissapear;
+  animation-duration: 8s;
+  animation-delay: 23s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.dialogue-4 img {
+  height: 190px;
+  width: 175px;
+  position: absolute;
+  bottom: 145px;
+  left: 295px;
+  z-index: 0;  
+}
+
+.dialogue-4 .text-dialogue-4 {
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  bottom: -410px;
+  left: -220px;
+}
+
+.powers {
+  background: white;
+  z-index: 1;
+  height: 100px;
+  width: 255px;
+  bottom: 50px;
+  left: 2px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between; 
+  margin: 30px;
+  opacity: 0;    
+}
+
+.powers img{
+  height: 90px;
+  bottom: 100px;  
+}
+
+.html {
+  animation-name: logo;
+  animation-timing-function: linear;        
+  animation-delay: 100ms;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+}
+
+.css {
+  animation-name: logo;
+  animation-timing-function: linear;        
+  animation-delay: 100ms;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+}
+
+.javascript {
+  animation-name: logo;
+  animation-timing-function: linear;        
+  animation-delay: 100ms;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+}
+
+@keyframes logo {
+  0%{
+    /* opacity: 0; */
+    transform: translateX(0px);
+  }
+  2%{
+    /* opacity: 0.5; */
+    transform: translateX(0px);  
+  }
+  5%{
+    /* opacity: 1; */
+    transform: translateX(0px);
+  }
+  10%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(-7px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+.powers {
+  animation-name: appeardissapear;
+  animation-duration: 11s;
+  animation-delay: 20s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
