@@ -103,29 +103,6 @@
   animation-fill-mode: forwards; 
 }
 
-@keyframes walk {
-  0%{
-    transform: translateX(-40px);
-    opacity: 1;  
-  }
-  20%{
-    transform: translateX(-80px);
-    opacity: 1;  
-  }
-  40%{
-    transform: translateX(-160px);
-    opacity: 1;  
-  }
-  80%{
-    transform: translateX(-240px); 
-    opacity: 1;   
-  }
-  100% {
-    transform: translateX(-240px); 
-    opacity: 0;
-  }
-}
-
 .hero-head {
   background: var(--light-pink);
   height: 19px;
@@ -136,6 +113,15 @@
   border-radius: 50%;
   z-index: 1; 
 }
+
+.hero-antifaz img{  
+  position: absolute;
+  height: 18px;  
+  left: 8px;
+  bottom: -3px;  
+  z-index: 2; 
+}
+
 
 .hero-mask {
   background: var(--platzi-dark-blue);
@@ -177,24 +163,6 @@
   animation-delay: 2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-}
-
-@keyframes dissapear {
-  0%{
-    opacity: 1;
-  }
-  50%{
-    opacity: 1;
-  }
-  95%{
-    opacity: 0.6;
-  }
-  98%{
-    opacity: 0.8;
-  }
-  100%{
-    opacity: 0;
-  }
 }
 
 .dialogue-1 img {
@@ -278,38 +246,6 @@
   z-index: 0;        
 }
 
-@keyframes cloud {
- 
-  0%{ 
-    left: 0px; 
-  }
-  50%{ 
-    left: 410px; 
-  } 
-  75%{
-    left: 200px;
-  } 
-  100%{
-    left:2px;
-  }
-}
-
-@keyframes cloud2 {
- 
-  0%{ 
-    left: 400px; 
-  }
-  50%{ 
-    left: 20px; 
-  } 
-  75%{
-    left: 200px;
-  } 
-  100%{
-    left:405px;
-  }
-}
-
 .cloud::before {
   content: '';
   left: 50px;
@@ -366,22 +302,6 @@
   z-index: 2;        
 }
 
-@keyframes cloud3 {
- 
-  0%{ 
-    left: 620px; 
-  }
-  50%{ 
-    left: 765px; 
-  } 
-  75%{
-    left: 720px;
-  } 
-  100%{
-    left: 620px;
-  }
-}
-
 .cloud3::before {
   content: '';
   left: 50px;
@@ -405,41 +325,6 @@
   animation-fill-mode: forwards;
 }
 
-@keyframes climbing {
-  0%{
-    opacity: 0.2;
-    transform: translate(0px, 0px);
-  }
-  2%{
-    opacity: 0.6;
-    transform: translate(0px, 0px);
-  }
-  5%{
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
-  25%{
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }  
-  50%{
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
-  75%{
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
-  99%{
-    transform: translate(480px, -120px);
-    opacity: 1;
-  }
-  100%{
-    transform: translate(485px, -120px);
-    opacity: 0;
-  }
-}
-
 .hero2-head {
   background: var(--light-pink);
   height: 32px;
@@ -449,6 +334,14 @@
   bottom: -4px;
   border-radius: 50%;
   z-index: 1; 
+}
+
+.hero2-antifaz img{  
+  position: absolute;
+  height: 28px;  
+  left: 9px;
+  bottom: -2px;  
+  z-index: 2; 
 }
 
 .hero2-mask {
@@ -494,27 +387,6 @@
   opacity: 0;
 }
 
-@keyframes appeardissapear {
-  0%{
-    opacity: 0;
-  }
-  3%{
-    opacity: 0.7;
-  }
-  5%{
-    opacity: 1;
-  }
-  60%{
-    opacity: 1;
-  }
-  97%{
-    opacity: 0.4;
-  }
-  100%{
-    opacity: 0;
-  }
-}
-
 .dialogue-2 img {
   height: 90px;
   width: 150px;
@@ -546,6 +418,7 @@
   opacity: 0;
 }
 
+
 .villain-head {
   background: var(--dark-pink);
   height: 32px;
@@ -555,6 +428,14 @@
   bottom: -4px;
   border-radius: 50%;
   z-index: 1; 
+}
+
+.villain-antifaz img{  
+  position: absolute;
+  height: 28px;  
+  left: 9px;
+  bottom: -2px;  
+  z-index: 2; 
 }
 
 .villain-mask {
@@ -618,7 +499,7 @@
   left: 110px;
 }
 
-.container-laser1 {
+.container-fireball {
   position: absolute;
   z-index: 2;
   height: 100px;
@@ -634,37 +515,10 @@
   animation-delay: 9s;
 }
 
-.laser img {
+.fireball img {
   position: absolute;
   height: 50px;
-  transform: rotate(-25deg);  
-}
-
-@keyframes laser {
-  0%{
-    transform: translate(0, -5px);
-    opacity: 0.9;
-  }
-  25%{
-    transform: translate(75px, -25px);
-    opacity: 1;
-  }
-  50%{
-    transform: translate(150px, -45px);
-    opacity: 1;
-  }
-  75%{
-    transform: translate(225px, -65px);
-    opacity: 1;
-  }
-  99%{
-    transform: translate(300px, -89px);
-    opacity: 1;
-  }
-  100%{
-    transform: translate(300px, -90px);
-    opacity: 0;
-  }
+  transform: rotate(5deg);  
 }
 
 /*Scence 3*/
@@ -698,23 +552,7 @@
   animation-duration: 18s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  z-index: 0;        
-}
-
-@keyframes cloud4 {
- 
-  0%{ 
-    left: 70px; 
-  }
-  50%{ 
-    left: 165px; 
-  } 
-  75%{
-    left: 100px;
-  } 
-  100%{
-    left: 70px;
-  }
+  z-index: 1;        
 }
 
 .cloud4::before {
@@ -749,6 +587,14 @@
   bottom: 88px;
   border-radius: 50%;
   z-index: 3; 
+}
+
+.hero3-antifaz img{  
+  position: absolute;
+  height: 55px;  
+  left: 13px;
+  bottom: 90px;  
+  z-index: 4; 
 }
 
 .hero3-mask {
@@ -837,7 +683,12 @@
   display: flex;
   justify-content: space-between; 
   margin: 30px;
-  opacity: 0;    
+  opacity: 0;
+  animation-name: appeardissapear;
+  animation-duration: 11s;
+  animation-delay: 20s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;    
 }
 
 .powers img{
@@ -869,38 +720,6 @@
   animation-iteration-count: infinite;
 }
 
-@keyframes logo {
-  0%{
-    /* opacity: 0; */
-    transform: translateX(0px);
-  }
-  2%{
-    /* opacity: 0.5; */
-    transform: translateX(0px);  
-  }
-  5%{
-    /* opacity: 1; */
-    transform: translateX(0px);
-  }
-  10%{
-    transform: translateX(0px);
-  }
-  50%{
-    transform: translateX(-7px);
-  }
-  100%{
-    transform: translateX(0px);
-  }
-}
-
-.powers {
-  animation-name: appeardissapear;
-  animation-duration: 11s;
-  animation-delay: 20s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
 /* Scene 4 */
 
 .moon2 {
@@ -908,7 +727,7 @@
   z-index: 0;
   height: 70px;
   width: 70px;
-  bottom: 270px;  
+  bottom: 260px;  
   left: 630px;
   z-index: 0;
 }
@@ -920,8 +739,8 @@
 
 .cloud5, .cloud5::before, .cloud5::after {
   position: absolute;
-  width: 68px;
-  height: 28px;
+  width: 70px;
+  height: 30px;
   background:white;  
   border-radius: 100px / 50px;
 }
@@ -932,23 +751,7 @@
   animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  z-index: 0;        
-}
-
-@keyframes cloud5 {
- 
-  0%{ 
-    left: 620px; 
-  }
-  50%{ 
-    left: 750px; 
-  } 
-  75%{
-    left: 700px;
-  } 
-  100%{
-    left: 620px;
-  }
+  z-index: 1;        
 }
 
 .cloud5::before {
@@ -977,8 +780,8 @@
   left: 1075px;
   bottom: 60px;
   z-index: 1;
-  animation-name: appeardissapear;
-  animation-duration: 10s;
+  animation-name: appear;
+  animation-duration: 2s;
   animation-timing-function: linear;
   animation-delay: 33s;
   animation-fill-mode: forwards; 
@@ -994,6 +797,14 @@
   bottom: 88px;
   border-radius: 50%;
   z-index: 3; 
+}
+
+.hero4-antifaz img{  
+  position: absolute;
+  height: 55px;  
+  left: 13px;
+  bottom: 90px;  
+  z-index: 4; 
 }
 
 .hero4-mask {
@@ -1035,9 +846,9 @@
   bottom: 60px;
   z-index: 1;
   animation-name: appeardissapear;
-  animation-duration: 10s;
+  animation-duration: 25s;
   animation-timing-function: linear;
-  animation-delay: 34s;
+  animation-delay: 34.5s;
   animation-fill-mode: forwards; 
   opacity: 0;
 }
@@ -1051,6 +862,14 @@
   bottom: 88px;
   border-radius: 50%;
   z-index: 3; 
+}
+
+.villain2-antifaz img{  
+  position: absolute;
+  height: 55px;  
+  left: 13px;
+  bottom: 90px;  
+  z-index: 4; 
 }
 
 .villain2-mask {
@@ -1084,4 +903,583 @@
   bottom: -52px; 
   border-radius: 18px;
   z-index: 2;
+}
+
+.dialogue-5 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  animation-name: appeardissapear;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 35s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.dialogue-5 img {
+  height: 118px;
+  width: 185px;
+  position: absolute;
+  bottom: 160px;
+  left: 889px;
+  z-index: 0;  
+}
+
+.dialogue-5 .text-dialogue-5 {
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  bottom: -110px;
+  left: 80px;
+}
+
+.dialogue-6 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  animation-name: appeardissapear;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 39s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.dialogue-6 img {
+  height: 115px;
+  width: 185px;
+  position: absolute;
+  bottom: 150px;
+  left: 725px;
+  z-index: 0;  
+}
+
+.dialogue-6 .text-dialogue-6 {
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  bottom: 15px;
+  left: -79px;
+}
+
+.dialogue-7 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  animation-name: appeardissapear;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 42s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.dialogue-7 img {
+  height: 115px;
+  width: 185px;
+  position: absolute;
+  bottom: 150px;
+  left: 725px;
+  z-index: 0;  
+}
+
+.dialogue-7 .text-dialogue-7 {
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  bottom: 63px;
+  left: -79px;
+}
+
+.dialogue-8 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  animation-name: appeardissapear;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 45s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.dialogue-8 img {
+  height: 118px;
+  width: 185px;
+  position: absolute;
+  bottom: 160px;
+  left: 889px;
+  z-index: 0;  
+}
+
+.dialogue-8 .text-dialogue-8 {
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  bottom: -75px;
+  left: 80px;
+}
+
+.container-fireball2 {
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+  width: 80px;
+  bottom: 65px;  
+  left: 960px;
+  opacity: 0;
+  animation-name: laserizquierdo;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 5;
+  animation-fill-mode: forwards;
+  animation-delay: 48s;
+}
+
+.fireball2 img {
+  position: absolute;
+  height: 80px;
+  transform: rotate(-43deg);  
+}
+
+.container-fireball3 {
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+  width: 80px;
+  bottom: 65px;  
+  left: 960px;
+  opacity: 0;
+  animation-name: laserderecho;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 3;
+  animation-fill-mode: forwards;
+  animation-delay: 49s;
+}
+
+.fireball3 img {
+  position: absolute;
+  height: 80px;
+  transform: rotate(30deg);  
+}
+
+
+.dialogue-9 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  animation-name: appeardissapear;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 54.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.dialogue-9 img {
+  height: 115px;
+  width: 185px;
+  position: absolute;
+  bottom: 150px;
+  left: 725px;
+  z-index: 0;  
+}
+
+.dialogue-9 .text-dialogue-9 {
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  bottom: 92px;
+  left: -82px;
+}
+
+.dialogue-10 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  animation-name: appeardissapear;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 58s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.dialogue-10 img {
+  height: 118px;
+  width: 192px;
+  position: absolute;
+  bottom: 160px;
+  left: 889px;
+  z-index: 0;  
+}
+
+.dialogue-10 .text-dialogue-10 {
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  bottom: -45px;
+  left: 83px;
+}
+
+.dialogue-11 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  animation-name: appeardissapear;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 60.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.dialogue-11 img {
+  height: 118px;
+  width: 192px;
+  position: absolute;
+  bottom: 160px;
+  left: 889px;
+  z-index: 0;  
+}
+
+.dialogue-11 .text-dialogue-11 {
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  bottom: -10px;
+  left: 83px;
+}
+
+.powers2 {
+  background: white;
+  z-index: 1;
+  height: 100px;
+  width: 255px;
+  bottom: 50px;
+  left: 610px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between; 
+  margin: 30px;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 3.5s;
+  animation-delay: 60s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;        
+}
+
+
+.powers2 img{
+  height: 90px;
+  bottom: 100px;  
+}
+
+/* Animation keyframes */
+
+@keyframes walk {
+  0%{
+    transform: translateX(-40px);
+    opacity: 1;  
+  }
+  20%{
+    transform: translateX(-80px);
+    opacity: 1;  
+  }
+  40%{
+    transform: translateX(-160px);
+    opacity: 1;  
+  }
+  80%{
+    transform: translateX(-240px); 
+    opacity: 1;   
+  }
+  100% {
+    transform: translateX(-240px); 
+    opacity: 0;
+  }
+}
+
+@keyframes dissapear {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  95%{
+    opacity: 0.6;
+  }
+  98%{
+    opacity: 0.8;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes cloud {
+ 
+  0%{ 
+    left: 0px; 
+  }
+  50%{ 
+    left: 410px; 
+  } 
+  75%{
+    left: 200px;
+  } 
+  100%{
+    left:2px;
+  }
+}
+
+@keyframes cloud2 {
+ 
+  0%{ 
+    left: 400px; 
+  }
+  50%{ 
+    left: 20px; 
+  } 
+  75%{
+    left: 200px;
+  } 
+  100%{
+    left:405px;
+  }
+}
+
+@keyframes cloud3 {
+ 
+  0%{ 
+    left: 620px; 
+  }
+  50%{ 
+    left: 765px; 
+  } 
+  75%{
+    left: 720px;
+  } 
+  100%{
+    left: 620px;
+  }
+}
+
+@keyframes climbing {
+  0%{
+    opacity: 0.2;
+    transform: translate(0px, 0px);
+  }
+  2%{
+    opacity: 0.6;
+    transform: translate(0px, 0px);
+  }
+  5%{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  25%{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }  
+  50%{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  75%{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  99%{
+    transform: translate(480px, -120px);
+    opacity: 1;
+  }
+  100%{
+    transform: translate(485px, -120px);
+    opacity: 0;
+  }
+}
+
+@keyframes appeardissapear {
+  0%{
+    opacity: 0;
+  }
+  3%{
+    opacity: 0.7;
+  }
+  5%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  97%{
+    opacity: 0.4;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes laser {
+  0%{
+    transform: translate(0, -5px);
+    opacity: 0.9;
+  }
+  25%{
+    transform: translate(75px, -25px);
+    opacity: 1;
+  }
+  50%{
+    transform: translate(150px, -45px);
+    opacity: 1;
+  }
+  75%{
+    transform: translate(225px, -65px);
+    opacity: 1;
+  }
+  99%{
+    transform: translate(300px, -89px);
+    opacity: 1;
+  }
+  100%{
+    transform: translate(300px, -90px);
+    opacity: 0;
+  }
+}
+
+@keyframes cloud4 {
+ 
+  0%{ 
+    left: 70px; 
+  }
+  50%{ 
+    left: 165px; 
+  } 
+  75%{
+    left: 100px;
+  } 
+  100%{
+    left: 70px;
+  }
+}
+
+@keyframes logo {
+  0%{
+    /* opacity: 0; */
+    transform: translateX(0px);
+  }
+  2%{
+    /* opacity: 0.5; */
+    transform: translateX(0px);  
+  }
+  5%{
+    /* opacity: 1; */
+    transform: translateX(0px);
+  }
+  10%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(-7px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes cloud5 {
+ 
+  0%{ 
+    left: 620px; 
+  }
+  50%{ 
+    left: 750px; 
+  } 
+  75%{
+    left: 700px;
+  } 
+  100%{
+    left: 620px;
+  }
+}
+
+@keyframes laserizquierdo {
+  1%{
+    transform: translateX(-10px);
+    opacity: 0.9;
+  }
+  25%{
+    transform: translateX(-70px);
+    opacity: 1;
+  }
+  50%{
+    transform: translateX(-130px);
+    opacity: 1;
+  }
+  75%{
+    transform: translateX(-190px);
+    opacity: 1;
+  }
+  99%{
+    transform: translateX(-260px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(-260px);
+    opacity: 0;
+  }
+}
+
+@keyframes laserderecho {
+  1%{
+    transform: translateX(-260px);
+    opacity: 0.9;
+  }
+  25%{
+    transform: translateX(-195px);
+    opacity: 1;
+  }
+  50%{
+    transform: translateX(-140px);
+    opacity: 1;
+  }
+  75%{
+    transform: translateX(-80px);
+    opacity: 1;
+  }
+  99%{
+    transform: translateX(20px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  3%{
+    opacity: 0.7;
+  }
+  5%{
+    opacity: 0.9;
+  }
+  100%{
+    opacity: 1;
+  }  
 }
